@@ -33,7 +33,7 @@ function displaySongInfo(){
         $('#songs').append("<p>"+ songs[i] +"</p>");
         $('#artists').append("<p> by: "+ artist[i] +"</p>");
         $('#lengths').append("<p>"+ length[i] +"</p>");
-        $('#links').append("<p>"+ link[i] +"</p>");
+        $('#links').append("<a href='"+ link[i] +"'target='_black'>Listen</a>");
     }
 }
 
@@ -48,9 +48,29 @@ function emptySongInfo(){
 
 
 function addSongInfo(){
-    // BELOW write the code to add new items to each of the arrays.
-
-
+    var a = $('#song').val(),
+        b = $('#artis').val(),
+        c = $('#length').val(),
+        d = $('#image').val(),
+        e = $('#link').val();
+        
+        if (a === ''){
+            alert('Please enter a song name');
+        }else if (b === ''){
+            alert('Please enter the artists name');
+        }else if (c === ''){
+            alert('Please enter the song length');
+        }else if (d === ''){
+            alert('Please enter an image for the song');
+        }else if (e === ''){
+            alert('Please enter the link for the song');
+        }else{
+            songs.push(a);
+            artist.push(b);
+            length.push(c);
+            image.push(d);
+            link.push(e);
+        }
 }
 
 $("#add").click(function() {
