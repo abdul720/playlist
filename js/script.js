@@ -1,5 +1,9 @@
 /* global $ */
-
+var a,
+    b,
+    c,
+    d,
+    e;
 // BELOW Update the songs array with four of your favorites songs.
 var songs = ['Believer', "I Wouldn't Mind", 'Rockefeller Street'],
     artist = ['Imagine Dragons', 'He Is We', 'Getter Jaani'],
@@ -48,7 +52,7 @@ function emptySongInfo(){
 
 
 function addSongInfo(){
-    var a = $('#song').val(),
+        a = $('#song').val(),
         b = $('#artis').val(),
         c = $('#length').val(),
         d = $('#image').val(),
@@ -73,10 +77,36 @@ function addSongInfo(){
         }
 }
 
+function emptyInput(){
+    $("#song").val('');
+    $("#artist").val('');
+    $("#length").val('');
+    $("#image").val('');
+    $("#link").val('');
+}
+
+
+$("#clear").click(function(){
+    emptyInput();
+});
+
+displaySongInfo();
+
+
+
 $("#add").click(function() {
     emptySongInfo();
     addSongInfo();
     displaySongInfo();
+    
+    window.localStorage.setItem("first", a);
+    window.localStorage.setItem("second", b);
+    window.localStorage.setItem("third", c);
+    window.localStorage.setItem("fourth", d);
+    window.localStorage.setItem("fifth", e);
 });
 
-displaySongInfo();
+
+$('#remove').click(function(){
+    var num = $('#removeSong').val();
+});
