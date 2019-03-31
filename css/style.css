@@ -1,5 +1,6 @@
 h1 {
     text-align: center;
+    color: white;
 }
 
 #cart {
@@ -63,4 +64,12 @@ input {
 button {
     font-size: 14px;
     padding: 5px 10px;
+}
+
+body {
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/05/Music-Backgrounds-For-Desktop-sound-waves.jpg');
+}
+
+p {
+    color: lightgray;
 }
